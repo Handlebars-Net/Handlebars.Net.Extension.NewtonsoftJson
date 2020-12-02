@@ -1,0 +1,79 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E9AC0BCD-C060-4634-BBBB-636167C809B4}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Handlebars.Extension", "Handlebars.Extension\Handlebars.Extension.csproj", "{9822C7B8-7E51-42BC-9A49-72A10491B202}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Handlebars.Extension.Test", "Handlebars.Extension.Test\Handlebars.Extension.Test.csproj", "{6BA232A6-8C4D-4C7D-BD75-1844FE9774AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Handlebars.Extension.Benchmark", "Handlebars.Extension.Benchmark\Handlebars.Extension.Benchmark.csproj", "{B335E9C5-7DD3-416D-89CC-8D48D89DB628}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9822C7B8-7E51-42BC-9A49-72A10491B202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9822C7B8-7E51-42BC-9A49-72A10491B202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9822C7B8-7E51-42BC-9A49-72A10491B202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9822C7B8-7E51-42BC-9A49-72A10491B202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BA232A6-8C4D-4C7D-BD75-1844FE9774AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA232A6-8C4D-4C7D-BD75-1844FE9774AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA232A6-8C4D-4C7D-BD75-1844FE9774AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA232A6-8C4D-4C7D-BD75-1844FE9774AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B335E9C5-7DD3-416D-89CC-8D48D89DB628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B335E9C5-7DD3-416D-89CC-8D48D89DB628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B335E9C5-7DD3-416D-89CC-8D48D89DB628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B335E9C5-7DD3-416D-89CC-8D48D89DB628}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = VisualStudio
+		$1.inheritsScope = text/plain
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.IndentSwitchBody = True
+		$2.IndentBlocksInsideExpressions = True
+		$2.AnonymousMethodBraceStyle = NextLine
+		$2.PropertyBraceStyle = NextLine
+		$2.PropertyGetBraceStyle = NextLine
+		$2.PropertySetBraceStyle = NextLine
+		$2.EventBraceStyle = NextLine
+		$2.EventAddBraceStyle = NextLine
+		$2.EventRemoveBraceStyle = NextLine
+		$2.StatementBraceStyle = NextLine
+		$2.ElseNewLinePlacement = NewLine
+		$2.CatchNewLinePlacement = NewLine
+		$2.FinallyNewLinePlacement = NewLine
+		$2.WhileNewLinePlacement = DoNotCare
+		$2.ArrayInitializerWrapping = DoNotChange
+		$2.ArrayInitializerBraceStyle = NextLine
+		$2.BeforeMethodDeclarationParentheses = False
+		$2.BeforeMethodCallParentheses = False
+		$2.BeforeConstructorDeclarationParentheses = False
+		$2.NewLineBeforeConstructorInitializerColon = NewLine
+		$2.NewLineAfterConstructorInitializerColon = SameLine
+		$2.BeforeDelegateDeclarationParentheses = False
+		$2.NewParentheses = False
+		$2.SpacesBeforeBrackets = False
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		$0.DotNetNamingPolicy = $3
+		$3.DirectoryNamespaceAssociation = None
+		$3.ResourceNamePolicy = FileFormatDefault
+		version = 1.0.0
+	EndGlobalSection
+EndGlobal
