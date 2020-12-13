@@ -5,12 +5,12 @@
     </PropertyGroup>
     
     <PropertyGroup>
-        <Authors><!-- Replace with correct value --></Authors>
-        <Copyright>Copyright © 2020 <!-- Replace with correct value --></Copyright>
+        <Authors>Oleh Formaniuk</Authors>
+        <Copyright>Copyright © 2020 Handlebars-Net</Copyright>
         <PackageLicense>LICENSE</PackageLicense>
         <PackageIcon>hbnet-icon.png</PackageIcon>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Owner><!-- Replace with correct value --></Owner>
+        <Owner>Handlebars-Net</Owner>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>false</EmbedUntrackedSources>
         <IncludeSymbols>true</IncludeSymbols>

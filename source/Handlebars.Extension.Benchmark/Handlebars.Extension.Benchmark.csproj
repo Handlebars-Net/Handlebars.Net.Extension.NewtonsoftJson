@@ -6,6 +6,7 @@
         <IsPackable>false</IsPackable>
         <GenerateDocumentationFile>false</GenerateDocumentationFile>
         <RootNamespace>HandlebarsNet.Extension.Benchmark</RootNamespace>
+        <ProjectGuid>2E7E7C0E-195D-4358-9621-D97D4AA84F57</ProjectGuid>
     </PropertyGroup>
 
     <ItemGroup>

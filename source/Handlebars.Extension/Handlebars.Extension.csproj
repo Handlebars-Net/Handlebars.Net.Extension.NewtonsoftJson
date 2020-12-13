@@ -1,12 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyName>Handlebars.Extension.<!-- Replace with correct value --></AssemblyName>
-    <ProjectGuid><!-- Replace with correct value --></ProjectGuid>
+    <AssemblyName>Handlebars.Extension.NewtonsoftJson</AssemblyName>
+    <ProjectGuid>6899A619-B9D0-4C31-84A8-B8F79B3F3B23</ProjectGuid>
     <TargetFrameworks>netstandard1.3;netstandard2.0;netstandard2.1</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TargetFrameworks);net451;net452;net472</TargetFrameworks>
     <Version>1.0.0</Version>
-    <RootNamespace>HandlebarsDotNet.Extension.<!-- Replace with correct value --></RootNamespace>
+    <RootNamespace>HandlebarsDotNet.Extension.NewtonsoftJson</RootNamespace>
+    <Nullable>enable</Nullable>
+    <SignAssembly Condition="'$(ShouldSignAssembly)' == 'true'">true</SignAssembly>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.3'">
@@ -26,18 +28,17 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Description><!-- Replace with correct value --></Description>
-    <PackageId>Handlebars.Net.Extension.<!-- Replace with correct value --></PackageId>
-    <PackageProjectUrl><!-- Replace with correct value --></PackageProjectUrl>
-    <PackageTags>handlebars;mustache;templating;engine;extension;<!-- Replace with correct value --></PackageTags>
+    <Description>Newtonsoft.Json extension for Handlebars.Net</Description>
+    <PackageId>Handlebars.Net.Extension.NewtonsoftJson</PackageId>
+    <PackageProjectUrl>https://github.com/Handlebars-Net/Handlebars.Net.Extension.NewtonsoftJson</PackageProjectUrl>
+    <PackageTags>handlebars;mustache;templating;engine;extension;json</PackageTags>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl><!-- Replace with correct value --></RepositoryUrl>
-    <PackageReleaseNotes><!-- Replace with correct value -->/releases/tag/$(Version)</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/Handlebars-Net/Handlebars.Net.Extension.NewtonsoftJson</RepositoryUrl>
+    <PackageReleaseNotes>https://github.com/Handlebars-Net/Handlebars.Net.Extension.NewtonsoftJson/releases/tag/$(Version)</PackageReleaseNotes>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   
   <ItemGroup Condition="'$(TargetFramework)'=='net451' or '$(TargetFramework)'=='net452' or '$(TargetFramework)'=='net472'">
-    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)'=='netstandard1.3'">
@@ -51,6 +52,11 @@
   
   <ItemGroup Condition="'$(ContinuousIntegrationBuild)' == 'true'">
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Handlebars.Net" Version="2.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
   
 </Project>

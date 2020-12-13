@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.1;netcoreapp3.1</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT'">$(TargetFrameworks);net452;net46;net461;net472</TargetFrameworks>
-    <ProjectGuid><!-- Replace with correct value --></ProjectGuid>
+    <ProjectGuid>D8029BEC-8EE3-484F-833C-324760F90072</ProjectGuid>
     <RootNamespace>HandlebarsDotNet.Extension.Test</RootNamespace>
     <IsPackable>false</IsPackable>
     <SignAssembly>false</SignAssembly>
@@ -59,6 +59,10 @@
   
   <ItemGroup>
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Handlebars.Extension\Handlebars.Extension.csproj" />
   </ItemGroup>
 
 </Project>
