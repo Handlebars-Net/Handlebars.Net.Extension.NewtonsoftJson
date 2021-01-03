@@ -199,8 +199,12 @@ namespace HandlebarsDotNet.Extension.Test
             var template = handlebars.Compile(source);
 
             var output = template(model);
+            var actual = output
+                .Replace("\n", string.Empty)
+                .Replace("\r", string.Empty)
+                .Replace(" ", string.Empty);
 
-            Assert.Equal("1,True,False,1.1", output);
+            Assert.Equal("[1,true,false,1.1]", actual);
         }
         
         [Theory]
