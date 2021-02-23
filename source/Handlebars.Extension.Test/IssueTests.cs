@@ -1,3 +1,4 @@
+using System.Linq;
 using HandlebarsDotNet.Extension.NewtonsoftJson;
 using Newtonsoft.Json.Linq;
 using Xunit;
@@ -56,6 +57,37 @@ namespace HandlebarsDotNet.Extension.Test
                 Nested1 = new { Prop = "Prop" }, 
                 Nested2 = (object)null
             });
+        }
+        
+        // issue: https://github.com/Handlebars-Net/Handlebars.Net/issues/428
+        [Fact]
+        public void PartialParametersInsideEachTest()
+        {
+            var handlebars = Handlebars.Create();
+            handlebars.Configuration.UseNewtonsoftJson();
+
+            const string source = "{{#each itemType}}{{>partial item=this}}{{/each}}";
+            const string partialContent = @"{{item}}";
+
+            handlebars.RegisterTemplate("partial", partialContent);
+
+            var template = handlebars.Compile(source);
+
+            var data = new
+            {
+                itemType = new JObject()
+                {
+                    ["1"] = "1",
+                    ["3"] = "3",
+                    ["5"] = "5",
+                    ["7"] = "7"
+                }
+            };
+            
+            var actual = template(data);
+            var expected = data.itemType.Properties().Select(o => o.Value.Value<string>());
+            
+           Assert.Equal(actual, string.Join("", expected));
         }
     }
 }

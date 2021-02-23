@@ -27,14 +27,13 @@ namespace HandlebarsDotNet.Extension.NewtonsoftJson
     
     internal class JsonFeature : IFeature, IFeatureFactory
     {
-        private static readonly JObjectDescriptorProvider JObjectDescriptorProvider = new JObjectDescriptorProvider();
-
         public void OnCompiling(ICompiledHandlebarsConfiguration configuration)
         {
             var providers = configuration.ObjectDescriptorProviders;
             var objectDescriptorProvider = providers.OfType<ObjectDescriptorProvider>().Single();
             providers.Add(new JArrayDescriptorProvider(objectDescriptorProvider));
-            providers.Add(JObjectDescriptorProvider);
+            providers.Add(new JObjectDescriptorProvider());
+            providers.Add(new JValueDescriptorProvider());
             
             configuration.FormatterProviders.Add(new JFormatterProvider());
         }
