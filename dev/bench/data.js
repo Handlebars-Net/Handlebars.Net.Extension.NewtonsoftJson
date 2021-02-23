@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1614038442561,
+  "lastUpdate": 1614042737675,
   "repoUrl": "https://github.com/Handlebars-Net/Handlebars.Net.Extension.NewtonsoftJson",
   "entries": {
     "Benchmark.Net.Extension Benchmark": [
@@ -264,6 +264,72 @@ window.BENCHMARK_DATA = {
             "value": 276485.6797851563,
             "unit": "ns",
             "range": "± 5799.643627033943"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "zjklee@gmail.com",
+            "name": "Oleh Formaniuk",
+            "username": "zjklee"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f2f31c57bfb9637bbbbb9e4fdb20cf0fa8134bd8",
+          "message": "Merge pull request #3 from Handlebars-Net/issues/428\n\nProper `JValue` handling in partials parameters",
+          "timestamp": "2021-02-23T03:08:21+02:00",
+          "tree_id": "f5fd485f90ff7071789d851d3cf632b9f218bbd8",
+          "url": "https://github.com/Handlebars-Net/Handlebars.Net.Extension.NewtonsoftJson/commit/f2f31c57bfb9637bbbbb9e4fdb20cf0fa8134bd8"
+        },
+        "date": 1614042737146,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.Default(N: 2)",
+            "value": 31759.751818847657,
+            "unit": "ns",
+            "range": "± 444.9625128452815"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.Default(N: 5)",
+            "value": 271585.42106119794,
+            "unit": "ns",
+            "range": "± 2929.1382956375405"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.Default(N: 10)",
+            "value": 1961051.6244419643,
+            "unit": "ns",
+            "range": "± 29619.675994013956"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.NewtonsoftJson(N: 2)",
+            "value": 29432.2993754069,
+            "unit": "ns",
+            "range": "± 496.65422377184535"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.NewtonsoftJson(N: 5)",
+            "value": 244640.14059012276,
+            "unit": "ns",
+            "range": "± 2638.891705324764"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.NewtonsoftJson(N: 10)",
+            "value": 1831468.9806189905,
+            "unit": "ns",
+            "range": "± 15711.813346403813"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.EndToEnd.Default(N: 5, DataType: \"json\")",
+            "value": 260391.5275390625,
+            "unit": "ns",
+            "range": "± 2742.5068671131944"
           }
         ]
       }
