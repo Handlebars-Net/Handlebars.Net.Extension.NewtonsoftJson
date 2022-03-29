@@ -265,7 +265,7 @@ namespace HandlebarsDotNet.Extension.Test
 
             var output = template(model);
 
-            Assert.Equal("0-True--Key1-Val1;1-False--Key2-Val2;", output);
+            Assert.Equal("0-True-False-Key1-Val1;1-False-True-Key2-Val2;", output);
         }
         
         [Theory]
