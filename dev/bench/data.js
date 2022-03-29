@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1648589736252,
+  "lastUpdate": 1648590223029,
   "repoUrl": "https://github.com/Handlebars-Net/Handlebars.Net.Extension.NewtonsoftJson",
   "entries": {
     "Benchmark.Net.Extension Benchmark": [
@@ -396,6 +396,72 @@ window.BENCHMARK_DATA = {
             "value": 253127.306640625,
             "unit": "ns",
             "range": "± 416.68989235846504"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "zjklee@gmail.com",
+            "name": "Oleh Formaniuk",
+            "username": "zjklee"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "8ae6b0f71af0e49dddb490f3a20d5e198adf3c97",
+          "message": "Update release.yml\n\nUse `windows-2019` instead of latest",
+          "timestamp": "2022-03-29T14:39:43-07:00",
+          "tree_id": "4a3a0c47036035f0742b65e59c36570a865d4d76",
+          "url": "https://github.com/Handlebars-Net/Handlebars.Net.Extension.NewtonsoftJson/commit/8ae6b0f71af0e49dddb490f3a20d5e198adf3c97"
+        },
+        "date": 1648590222235,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.Default(N: 2)",
+            "value": 30766.999537876673,
+            "unit": "ns",
+            "range": "± 93.66113747240118"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.Default(N: 5)",
+            "value": 270002.94778645836,
+            "unit": "ns",
+            "range": "± 998.4889107291829"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.Default(N: 10)",
+            "value": 1836566.93671875,
+            "unit": "ns",
+            "range": "± 14081.352703410992"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.NewtonsoftJson(N: 2)",
+            "value": 27622.09452702449,
+            "unit": "ns",
+            "range": "± 35.05568829251196"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.NewtonsoftJson(N: 5)",
+            "value": 230841.259312221,
+            "unit": "ns",
+            "range": "± 701.7629611587616"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.NewtonsoftJson(N: 10)",
+            "value": 1753927.774639423,
+            "unit": "ns",
+            "range": "± 14890.379263784404"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.EndToEnd.Default(N: 5, DataType: \"json\")",
+            "value": 233843.7283528646,
+            "unit": "ns",
+            "range": "± 448.98663799241837"
           }
         ]
       }
