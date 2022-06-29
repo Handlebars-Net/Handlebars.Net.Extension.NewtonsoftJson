@@ -89,5 +89,23 @@ namespace HandlebarsDotNet.Extension.Test
             
            Assert.Equal(actual, string.Join("", expected));
         }
+        
+        // issue: https://github.com/Handlebars-Net/Handlebars.Net.Extension.NewtonsoftJson/issues/5
+        [Fact]
+        public void EscapedPathWithDots()
+        {
+            var handlebars = Handlebars.Create();
+            var template = handlebars.Compile("{{ withDots.[one.two.three] }}");
+
+            var actual = template(new JObject
+            {
+                ["withDots"] = new JObject
+                {
+                    ["one.two.three"] = 42
+                }
+            });
+    
+            Assert.Equal("42", actual);
+        }
     }
 }
