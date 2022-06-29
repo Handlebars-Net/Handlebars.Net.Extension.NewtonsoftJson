@@ -10,7 +10,7 @@ namespace HandlebarsDotNet.Extension.NewtonsoftJson
         public bool TryGetValue(object instance, ChainSegment memberName, out object? value)
         {
             var jObject = (JObject) instance;
-            if (jObject.TryGetValue(memberName, StringComparison.OrdinalIgnoreCase, out var token))
+            if (jObject.TryGetValue(memberName.TrimmedValue, StringComparison.OrdinalIgnoreCase, out var token))
             {
                 value = token is JValue jValue 
                     ? jValue.Value 
