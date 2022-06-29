@@ -1,5 +1,8 @@
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using HandlebarsDotNet.Extension.NewtonsoftJson;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Xunit;
 
@@ -88,6 +91,26 @@ namespace HandlebarsDotNet.Extension.Test
             var expected = data.itemType.Properties().Select(o => o.Value.Value<string>());
             
            Assert.Equal(actual, string.Join("", expected));
+        }
+        
+        // issue: https://github.com/Handlebars-Net/Handlebars.Net.Extension.NewtonsoftJson/issues/4
+        [Fact]
+        public void FormatterRespectsCulture()
+        {
+            var value = 22474.1;
+            
+            var model = JsonConvert.DeserializeObject("{ \"value\": " + value.ToString(CultureInfo.InvariantCulture) + " }");
+
+            var source = "{{this.value}}";
+
+            var handlebars = Handlebars.Create();
+            handlebars.Configuration.FormatProvider = CultureInfo.CreateSpecificCulture("de-DE");
+            handlebars.Configuration.UseNewtonsoftJson();
+            var template = handlebars.Compile(source);
+
+            var output = template(model).ToUpper();
+
+            Assert.Equal(value.ToString(CultureInfo.CreateSpecificCulture("de-DE")), output);
         }
     }
 }
