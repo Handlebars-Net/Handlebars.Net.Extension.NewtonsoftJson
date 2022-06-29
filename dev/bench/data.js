@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1648590561354,
+  "lastUpdate": 1656530850643,
   "repoUrl": "https://github.com/Handlebars-Net/Handlebars.Net.Extension.NewtonsoftJson",
   "entries": {
     "Benchmark.Net.Extension Benchmark": [
@@ -528,6 +528,72 @@ window.BENCHMARK_DATA = {
             "value": 234342.3383138021,
             "unit": "ns",
             "range": "± 493.9142038595035"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "zjklee@gmail.com",
+            "name": "Oleh Formaniuk",
+            "username": "zjklee"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2797f21bf6e6849620fc65c56422a065e2fea8e5",
+          "message": "Merge pull request #5 from Handlebars-Net/dependabot/nuget/source/Handlebars.Extension/Newtonsoft.Json-13.0.1\n\nBump Newtonsoft.Json from 12.0.3 to 13.0.1 in /source/Handlebars.Extension",
+          "timestamp": "2022-06-29T12:23:35-07:00",
+          "tree_id": "ea5e277af9abff8631b9854ec8570eacdad2316e",
+          "url": "https://github.com/Handlebars-Net/Handlebars.Net.Extension.NewtonsoftJson/commit/2797f21bf6e6849620fc65c56422a065e2fea8e5"
+        },
+        "date": 1656530849116,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.Default(N: 2)",
+            "value": 30399.74512532552,
+            "unit": "ns",
+            "range": "± 299.44212915833117"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.Default(N: 5)",
+            "value": 245246.53484235491,
+            "unit": "ns",
+            "range": "± 1067.0426914342183"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.Default(N: 10)",
+            "value": 1813263.9045572917,
+            "unit": "ns",
+            "range": "± 17260.486928989245"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.NewtonsoftJson(N: 2)",
+            "value": 27267.16779268705,
+            "unit": "ns",
+            "range": "± 149.38869597325"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.NewtonsoftJson(N: 5)",
+            "value": 226712.67415364584,
+            "unit": "ns",
+            "range": "± 1346.1543713198287"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.Json.NewtonsoftJson(N: 10)",
+            "value": 1694978.0783854167,
+            "unit": "ns",
+            "range": "± 13962.08937031124"
+          },
+          {
+            "name": "HandlebarsNet.Extension.Benchmark.EndToEnd.Default(N: 5, DataType: \"json\")",
+            "value": 233842.57299804688,
+            "unit": "ns",
+            "range": "± 159.82265532513696"
           }
         ]
       }
