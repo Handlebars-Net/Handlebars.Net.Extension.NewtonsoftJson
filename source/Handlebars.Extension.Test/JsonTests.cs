@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using HandlebarsDotNet.Collections;
 using HandlebarsDotNet.Extension.NewtonsoftJson;
@@ -37,11 +38,14 @@ namespace HandlebarsDotNet.Extension.Test
         [InlineData("\"8C82D441-EE53-47C6-9400-3B5045A4DF71\"")]
         public void ValueTypes(string value)
         {
+            CultureInfo.DefaultThreadCurrentCulture = CultureInfo.CreateSpecificCulture("de-DE");
+            
             var model = JsonConvert.DeserializeObject("{ \"value\": " + value + " }");
 
             var source = "{{this.value}}";
 
             var handlebars = Handlebars.Create();
+            handlebars.Configuration.FormatProvider = CultureInfo.InvariantCulture;
             handlebars.Configuration.UseNewtonsoftJson();
             var template = handlebars.Compile(source);
 
@@ -49,7 +53,7 @@ namespace HandlebarsDotNet.Extension.Test
 
             Assert.Equal(value.Trim('"'), output);
         }
-
+        
         [Theory]
         [ClassData(typeof(EnvGenerator))]
 		public void JsonTestIfTruthy(IHandlebars handlebars)
